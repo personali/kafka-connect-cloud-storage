@@ -49,7 +49,6 @@ public class TestFkushAdditionalSFRegisterTask {
         storageDataFileKeys.put(new TopicPartition("topic4",1),new ArrayList<>(Arrays.asList("topic2/path/to/file1.gz", "topic2/path/to/file/number/2.gz")));
     }
 
-    @Test
     public void testRun() throws Exception {
         FlushAdditionalRedshiftRegisterTask taskSpy = spy(new FlushAdditionalRedshiftRegisterTask());
         doReturn(mockConnection).when(taskSpy).getConnection(config);
