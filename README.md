@@ -174,3 +174,18 @@ Credentials to google cloud services are supplied using [Google Application Defa
 
 Integration tests can be ran using Docker.
 Simply run the `run-integration-tests.sh` && `run-integration-tests-mysql.sh` scripts on a Mac/Linux system.
+
+
+# Get access to connect instance
+- Go to AWS ECS
+- Choose operations-on-demand cluster
+- Choose connect-to-s3 service
+- Go to tasks & click on the single ECS
+- Click on the container instance id - e.g  dce33927-a16b-4082-b6cf-02396f6456ff
+- Get EC2 node IP - e.g  10.0.4.84
+- Ssh to the ip - e.g `$ ssh -i ~/.ssh/amazon.d/personali-production.pem ec2-user@10.0.4.84`
+- `docker ps` to get container id
+- get shell access. e.g `docker exec -it 4f66a4607394 bash`
+- Use Curl to interact with connect API. e.g `curl localhost:8084/connectors/connect-to-s3`
+
+
