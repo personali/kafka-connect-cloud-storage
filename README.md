@@ -187,5 +187,6 @@ Simply run the `run-integration-tests.sh` && `run-integration-tests-mysql.sh` sc
 - `docker ps` to get container id
 - get shell access. e.g `docker exec -it 4f66a4607394 bash`
 - Use Curl to interact with connect API. e.g `curl localhost:8084/connectors/connect-to-s3`
+- Connect configuration is in dropbox
 
 
